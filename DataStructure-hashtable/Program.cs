@@ -45,6 +45,12 @@ namespace DataStructures_HashTable
             Console.WriteLine("The frequency of are is : " + myMapNode.Get("are"));
             Console.WriteLine("The frequency of paranoid is : " + myMapNode.Get("paranoid"));
             Console.WriteLine("The frequency of  because : " + myMapNode.Get("because"));
+            Console.WriteLine("Removing Avoidable");
+            myMapNode.Remove("avoidable");
+            Console.WriteLine("displaying elements");
+            Console.WriteLine("The frequency of  avoidable : " + myMapNode.Get("avoidable"));
+
+
         }
     }
 }
