@@ -5,6 +5,10 @@
 // <creator Name="Kretika Arora"/>
 // --------------------------------------------------------------------------------------------------------------------
 using System;
+using System.Collections.Generic;
+using System.Reflection.Metadata;
+using System.Runtime.Serialization;
+using System.Threading;
 
 namespace DataStructures_HashTable
 {
@@ -23,7 +27,7 @@ namespace DataStructures_HashTable
             ///finding the frequency of each element in using count 
             MyMapNode<string, int> myMapNode = new MyMapNode<string, int>(20);
             Program program = new Program();
-            string sentence = "to be or not to be";
+            string sentence = "Paranoids are paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations"; ;
             String[] word = sentence.Split(' ');
             foreach (string element in word)
             {
@@ -38,9 +42,9 @@ namespace DataStructures_HashTable
                 myMapNode.Add(element, count - 1);
             }
             Console.WriteLine("***********************************************");
-            Console.WriteLine("The frequency of to is : " + myMapNode.Get("to"));
-            Console.WriteLine("The frequency of or is : " + myMapNode.Get("or"));
-            Console.WriteLine("The frequency of not : " + myMapNode.Get("not"));
+            Console.WriteLine("The frequency of are is : " + myMapNode.Get("are"));
+            Console.WriteLine("The frequency of paranoid is : " + myMapNode.Get("paranoid"));
+            Console.WriteLine("The frequency of  because : " + myMapNode.Get("because"));
         }
     }
 }
